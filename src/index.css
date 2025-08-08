@@ -28,7 +28,7 @@ main {
   flex-direction: column;
 }
 
-.die {
+.dice-container button {
   height: 70px;
   width: 70px;
   border-radius: 10px;
