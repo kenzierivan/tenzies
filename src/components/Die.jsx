@@ -1,6 +1,6 @@
 const Die = (props) => {
   return (
-    <button className="die">{props.number}</button>
+    <button className="die">{props.value}</button>
   )
 }
 export default Die
