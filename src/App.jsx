@@ -8,19 +8,28 @@ const App = () => {
   function generateAllNewDice() {
     const newDice = [];
     for(let i=0; i<10; i++) {
-      newDice.push(Math.floor(Math.random() * 6) + 1);
+      newDice.push({
+        value: Math.floor(Math.random() * 6) + 1,
+        isHeld: false
+      });
     }
     return newDice;
   }
 
-  const listOfDice = dice.map((die, index) => {
-    return <Die key={index} number={die} />
+  const listOfDice = dice.map((die, isHeld, index) => {
+    return <Die key={index} value={die} />
   })
+
+  function rollDice() {
+    setDice(generateAllNewDice());
+  }
   return (
     <main>
       <div className="dice-container">
         {listOfDice}
       </div>
+
+      <button className="roll-button" onClick={rollDice}>Roll</button>
     </main>
   )
 }

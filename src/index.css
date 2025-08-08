@@ -25,6 +25,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .die {
@@ -43,4 +44,18 @@ main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+}
+
+.roll-button {
+  background-color: #4c36f5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 120px;
+  margin-top: 50px;
+  font-size: 1.25rem;
+  font-family: Inter;
+  font-weight: 600;
+  cursor: pointer;
 }
